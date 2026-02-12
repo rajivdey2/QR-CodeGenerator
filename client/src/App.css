@@ -1,91 +1,92 @@
-/* Retro neon vibes */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* Apple-inspired minimal style */
 
 body {
-  background: linear-gradient(135deg, #0f0f0f, #1b1b3a, #2c003e);
-  background-size: 300% 300%;
-  animation: bgMove 10s infinite alternate;
-  font-family: 'Press Start 2P', cursive;
-  color: #e0e0e0;
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", 
+               "Helvetica Neue", Arial, sans-serif;
+  background: #f5f5f7;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-@keyframes bgMove {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+  color: #1d1d1f;
 }
 
 .container {
   text-align: center;
-  padding: 2rem;
-  border: 3px solid #ff00ff;
-  border-radius: 12px;
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 25px #ff00ff, 0 0 40px #00ffff;
+  padding: 3rem 2.5rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+}
+
+h1 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
 input {
-  padding: 0.8rem;
-  width: 80%;
-  border: 2px solid #00ffff;
-  border-radius: 8px;
-  background: black;
-  color: #00ffff;
-  font-family: 'Press Start 2P', cursive;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #d2d2d7;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s ease;
   margin-bottom: 1rem;
 }
 
-input::placeholder {
-  color: #777;
+input:focus {
+  border-color: #0071e3;
 }
 
 button {
-  margin: 0.5rem;
-  padding: 0.8rem 1.2rem;
-  border: 2px solid #ff00ff;
-  background: black;
-  color: #ff00ff;
-  border-radius: 8px;
-  font-family: 'Press Start 2P', cursive;
-  text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 12px;
+  border: none;
+  background: #0071e3;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 button:hover {
-  background: #ff00ff;
-  color: black;
-  box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
+  background: #005bb5;
+}
+
+button:active {
+  transform: scale(0.98);
 }
 
 .qr-container {
   margin-top: 2rem;
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 .qr-container img {
-  border: 4px solid #00ffff;
-  border-radius: 8px;
-  box-shadow: 0 0 15px #00ffff;
-  max-width: 250px;
+  border-radius: 16px;
+  max-width: 220px;
 }
 
 .qr-container a {
   display: block;
   margin-top: 1rem;
-  color: #00ffff;
+  font-size: 0.9rem;
+  color: #0071e3;
   text-decoration: none;
-  font-size: 0.8rem;
 }
 
 .qr-container a:hover {
-  color: #ff00ff;
+  text-decoration: underline;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
