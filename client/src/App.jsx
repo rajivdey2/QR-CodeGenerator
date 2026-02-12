@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>🎛 QR Retro Generator 🎶</h1>
+      <h1>QR Retro Generator</h1>
       <input
         type="text"
         placeholder="Enter URL..."
