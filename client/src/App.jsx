@@ -20,7 +20,7 @@ function App() {
       <h1>QR Retro Generator</h1>
       <input
         type="text"
-        placeholder="Enter URL..."
+        placeholder="URL"
         onChange={(e) => setText(e.target.value)}
         value={text}
       />
